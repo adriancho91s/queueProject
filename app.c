@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <time.h>
 
 // Macro to clear the console screen
 #ifdef _WIN32
@@ -293,7 +291,7 @@ void showPeopleInAttendance(Node *stack) {
  * @param stack The stack containing the people in attendance.
  */
 void savePeopleInAttendance(Node *stack) {
-    FILE *file = fopen("peopleAttended.dat", "a");
+    FILE *file = fopen("peopleAttended.dat", "a+");
     if (file == NULL) {
         printf("The file could not be opened\n");
         exit(1);
